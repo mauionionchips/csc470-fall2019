@@ -43,6 +43,7 @@ public class UnitScript : MonoBehaviour
     {
         if(selected)
         {
+            Color selectedColor = default;
             renderer.material.color = selectedColor;
         }
     }
