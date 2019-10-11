@@ -17,11 +17,11 @@ public class PlayerScript : MonoBehaviour
 
     bool previousIsGroundedValue;
 
-    public Text countText;
+    //public Text countText;
     public Text winText;
 
     private Rigidbody rb;
-    private int count;
+    //private int count;
     
     
     
@@ -29,8 +29,8 @@ public class PlayerScript : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        count = 0;
-        //SetCountText();
+        //count = 0;
+        SetCountText();
         winText.text = "";
         
 
@@ -78,36 +78,29 @@ public class PlayerScript : MonoBehaviour
             if (Cell.alive)
             {
                 other.gameObject.SetActive(false);
+                SetCountText();
 
             }
 
         }
 
-        //CellScript Cell = other.gameObject.GetComponent<CellScript>();
-        //if (Cell.alive)
-        //{
-        //if (other.gameObject.CompareTag("Cell"))
-        //{
-        //other.gameObject.SetActive(false);
-
-            //}
+        
 
 
             //count = count + 1;
-            //SetCountText();
+        
 
 
     }
-
-
-    }
-    //void SetCountText()
-    //{
+    private void SetCountText()
+    {
         //countText.text = "Count:" + count.ToString();
         //if (count >= 12)
         //{
-           // winText.text = "You Win";
-        //}
+        winText.text = "Try Again";
+    }
 
-    //}
+
+}
+
 
