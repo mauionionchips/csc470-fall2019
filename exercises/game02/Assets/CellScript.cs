@@ -10,6 +10,8 @@ public class CellScript : MonoBehaviour
 	public int x = -1;
 	public int y = -1;
 
+
+
 	Renderer renderer;
 
 	// Start is called before the first frame update
@@ -17,7 +19,7 @@ public class CellScript : MonoBehaviour
     {
 		prevAlive = alive;
         renderer = GetComponent<Renderer>();
-        renderer.enabled = true;
+        //renderer.enabled = true;
         
 	}
 
@@ -40,7 +42,7 @@ public class CellScript : MonoBehaviour
 
 		if (this.alive) {
             renderer.material.color = Color.blue;
-            renderer.enabled = false;
+            //renderer.enabled = false;
 
             
         }

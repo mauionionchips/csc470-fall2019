@@ -7,6 +7,8 @@ public class PlayerScript : MonoBehaviour
 {
     //character controller make sure we dont go in walls
     public CharacterController cc;
+
+    
     float moveSpeed = 8;
     float rotateSpeed = 70;
     //y velocity
@@ -68,13 +70,21 @@ public class PlayerScript : MonoBehaviour
         Camera.main.transform.position = camPos;
         Camera.main.transform.LookAt(transform);
     }
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.CompareTag("CellPrefab"))
+
+        CellScript Cell = other.gameObject.GetComponent<CellScript>();
+        if (Cell.alive)
         {
-            other.gameObject.SetActive(false);
-            count = count + 1;
-            SetCountText();
+            if (other.gameObject.CompareTag("Cell"))
+            {
+                other.gameObject.SetActive(false);
+
+            }
+        
+
+            //count = count + 1;
+            //SetCountText();
 
 
         }
