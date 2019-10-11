@@ -11,6 +11,9 @@ public class PlayerScript : MonoBehaviour
     float rotateSpeed = 70;
     //y velocity
     float yVel = 0;
+    float gravityModifier = 0.05f;
+
+    bool previousIsGroundedValue;
 
     public Text countText;
     public Text winText;
@@ -27,6 +30,9 @@ public class PlayerScript : MonoBehaviour
         count = 0;
         SetCountText();
         winText.text = "";
+        
+
+        previousIsGroundedValue = cc.isGrounded;
 
     }
 
@@ -39,6 +45,19 @@ public class PlayerScript : MonoBehaviour
         transform.Rotate(0, rotateSpeed * Time.deltaTime * hAxis, 0);
 
         Vector3 amountToMove = transform.forward * moveSpeed * Time.deltaTime * vAxis;
+
+        if (cc.isGrounded)
+        {
+            if (!previousIsGroundedValue)
+            {
+                yVel = 0;
+            }
+            
+        }
+        else
+        {
+            yVel = yVel + Physics.gravity.y * gravityModifier * Time.deltaTime;
+        }
 
         amountToMove.y = yVel;
 

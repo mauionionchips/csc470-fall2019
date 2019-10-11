@@ -18,6 +18,7 @@ public class CellScript : MonoBehaviour
 		prevAlive = alive;
         renderer = GetComponent<Renderer>();
         renderer.enabled = true;
+        
 	}
 
     // Update is called once per frame
@@ -39,8 +40,9 @@ public class CellScript : MonoBehaviour
 
 		if (this.alive) {
             renderer.material.color = Color.blue;
-            
             renderer.enabled = false;
+
+            
         }
         else
         {
