@@ -30,7 +30,7 @@ public class PlayerScript : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         count = 0;
-        SetCountText();
+        //SetCountText();
         winText.text = "";
         
 
@@ -72,32 +72,42 @@ public class PlayerScript : MonoBehaviour
     }
     private void OnCollisionEnter(Collision other)
     {
-
-        CellScript Cell = other.gameObject.GetComponent<CellScript>();
-        if (Cell.alive)
+        if (other.gameObject.CompareTag("Cell"))
         {
-            if (other.gameObject.CompareTag("Cell"))
+            CellScript Cell = other.gameObject.GetComponent<CellScript>();
+            if (Cell.alive)
             {
                 other.gameObject.SetActive(false);
 
             }
-        
+
+        }
+
+        //CellScript Cell = other.gameObject.GetComponent<CellScript>();
+        //if (Cell.alive)
+        //{
+        //if (other.gameObject.CompareTag("Cell"))
+        //{
+        //other.gameObject.SetActive(false);
+
+            //}
+
 
             //count = count + 1;
             //SetCountText();
 
 
-        }
+    }
 
 
     }
-    void SetCountText()
-    {
-        countText.text = "Count:" + count.ToString();
-        if (count >= 12)
-        {
-            winText.text = "You Win";
-        }
+    //void SetCountText()
+    //{
+        //countText.text = "Count:" + count.ToString();
+        //if (count >= 12)
+        //{
+           // winText.text = "You Win";
+        //}
 
-    }
-}
+    //}
+
