@@ -100,6 +100,14 @@ public class GameManager : MonoBehaviour
 		for (int x = 0; x < gridWidth; x++) {
 			for (int y = 0; y < gridHeight; y++) {
 				grid[x, y].alive = grid[x, y].nextAlive;
+                if (grid[x, y].alive)
+                {
+                    grid[x, y].gameObject.GetComponent<BoxCollider>().enabled = true;
+                } else
+                {
+                    grid[x, y].gameObject.GetComponent<BoxCollider>().enabled = false;
+                }
+
 			}
 		}
 	}

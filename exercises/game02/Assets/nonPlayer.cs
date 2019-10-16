@@ -59,9 +59,9 @@ public class nonPlayer : MonoBehaviour
         amountToMove1.y = yVel1;
 
         cc1.Move(amountToMove1);
-        Vector3 camPos = transform.position + transform.forward * -10 + Vector3.up * 3;
-        Camera.main.transform.position = camPos;
-        Camera.main.transform.LookAt(transform);
+        //Vector3 camPos = transform.position + transform.forward * -10 + Vector3.up * 3;
+        //Camera.main.transform.position = camPos;
+        //Camera.main.transform.LookAt(transform);
 
 
     }
