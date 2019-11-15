@@ -13,10 +13,10 @@ The visual and audio style of this game are intended to be absurd. This game wil
 <br>
 ## Target
 Low-bar of the game: <br>
-everything mentioned above with Bill Gates. <br>
+Everything mentioned above with Bill Gates. <br>
 High-bar of the game: <br>
-1. everything mentioned above with both Bill Gates and Jeff Bezos. <br>
-2. the player has more control than jumping, for example, the player can gain some awards(extra time) by double jump and reach the reward above the gap of two platforms.
+- Everything mentioned above with both Bill Gates and Jeff Bezos. <br>
+- The player has more control than jumping, for example, the player can gain some awards(extra time) by double jump and reach the reward above the gap of two platforms.
 <br>
 ## Timeline: <br>
 - 11/14/19: determine the design document after the discussion after class. <br>
