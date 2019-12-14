@@ -1,5 +1,0 @@
-# Game03
-
-My current plan for my game is a time limited game that has several characters(currently cylinders, I will change them to other kinds of characters, not sure yet). Each character has its own dialogue, as the system asks the player to collect certain dialogue, the player should go find out which character has which dialogue. This may take the player some luck to do it for the first round, but after that, it needs player's ability of memorization to remember each character's dialogue. After several rounds, if the player finishes all the tasks systerm has asked, player wins, if not, player looses.
-After what was mentioned above is done, I may upgrade characters to characters with health. Every time the player goes to one character, the character looses some health, if the player goes to one character too many times(a lot bigger than the system asks), the character would die(disapear), so the player will not be able to win the game if the system asks for the dialogue the died character carries.
-I will try polish this game more or add more features to the game (if in the process I have more ideas) if all the stuff above is succesfully done.
